@@ -1,24 +1,28 @@
-import React, { useEffect, useRef } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Box, HStack, Image } from '@chakra-ui/react';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import React, { useEffect, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Box, HStack, Image } from "@chakra-ui/react";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebook,
+  faGithub,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 const socials = [
   {
-    name: 'Facebook',
+    name: "Facebook",
     icon: faFacebook,
-    url: 'https://www.facebook.com/RobOlympiX',
+    url: "https://www.facebook.com/RobOlympiX",
   },
   {
-    name: 'Mail',
+    name: "Mail",
     icon: faEnvelope,
-    url: 'mailto:contact@robolympix.tn',
+    url: "mailto:contact@robolympix.tn",
   },
   {
-    name: 'Linkedin',
+    name: "Linkedin",
     icon: faLinkedin,
-    url: 'https://www.linkedin.com/company/robolympix/',
+    url: "https://www.linkedin.com/company/robolympix/",
   },
 ];
 
@@ -29,14 +33,14 @@ const Header = () => {
   const handleScroll = () => {
     const scrollY = window.scrollY;
     let scrolling = scrollY - prevScrollY <= 0 ? 0 : -200;
-    translation.current.style.transform = 'translateY(' + scrolling + 'px)';
+    translation.current.style.transform = "translateY(" + scrolling + "px)";
     prevScrollY = scrollY;
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [translation]);
 
@@ -57,14 +61,18 @@ const Header = () => {
       ref={translation}
       zIndex={5}
     >
-      <Box color="white" maxWidth={["400px", "1280px"]} margin={["0 0", "0 auto"]}>
+      <Box
+        color="white"
+        maxWidth={["400px", "1280px"]}
+        margin={["0 0", "0 auto"]}
+      >
         <HStack
           px={[4, 16]}
           py={4}
           justifyContent="space-between"
           alignItems="center"
         >
-       {/*  <Box>
+          {/*  <Box>
             
             <Image
               src="\public\cool-robot.png"
@@ -76,12 +84,16 @@ const Header = () => {
           <HStack id="header-socials" spacing={[2, 8]}>
             {socials.map((social) => (
               <a
-                aria-label={'Reachout using ' + social.name}
+                aria-label={"Reachout using " + social.name}
                 key={social.name}
                 href={social.url}
               >
-                {windowWidth > 760 && <FontAwesomeIcon icon={social.icon} size='2x' />}
-                {windowWidth <= 760 && <FontAwesomeIcon icon={social.icon} size='sm' />}
+                {windowWidth > 760 && (
+                  <FontAwesomeIcon icon={social.icon} size="2x" />
+                )}
+                {windowWidth <= 760 && (
+                  <FontAwesomeIcon icon={social.icon} size="sm" />
+                )}
               </a>
             ))}
           </HStack>
@@ -90,12 +102,10 @@ const Header = () => {
             <a href="#image-section">Galerie</a>
             <a href="#eurobot-section">Eurobot</a>
             <a href="#challenges-section">Challenges</a>
-            <a href="#team-section">Team</a>
+            <a href="#team-section">Notre Equipe</a>
           </HStack>
         </HStack>
       </Box>
     </Box>
   );
 };
-
-export default Header;
