@@ -19,7 +19,7 @@ const LandingPage = () => {
             position: "absolute",
             width: "100%",
             left: "50%",
-            top: "8.5%",
+            top: "6.5%",
             height: "100%",
             objectFit: "contain",
             transform: "translate(-50.05%, -50%)",
@@ -30,7 +30,7 @@ const LandingPage = () => {
           id="myVideo"
         >
           <source
-            src="\RobOlympiX 1.0 _ Official Aftermovie.mp4"
+            src="RobOlympiX 1.0 _ Official Aftermovie.mp4"
             type="video/mp4"
           />
         </video>
@@ -53,7 +53,7 @@ const LandingPage = () => {
           id="myVideo"
         >
           <source
-            src="\public\Robolumpix\RobOlympiX 1.0 _ Official Aftermovie.mp4"
+            src="RobOlympiX 1.0 _ Official Aftermovie.mp4"
             type="video/mp4"
           />
         </video>

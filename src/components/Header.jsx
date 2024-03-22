@@ -102,6 +102,7 @@ const Header = () => {
             <a href="#image-section">Galerie</a>
             <a href="#eurobot-section">Eurobot</a>
             <a href="#challenges-section">Challenges</a>
+            <a href="#planning-section">Planning</a>
             <a href="#team-section">Notre Equipe</a>
           </HStack>
         </HStack>
