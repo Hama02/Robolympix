@@ -35,7 +35,7 @@ const Planning = () => {
           <Image
             zIndex={1}
             borderRadius="10px 10px 0 0"
-            src="\public\planning1.jpg"
+            src="planning1.jpg"
             alt="planning"
             height={["400px", "500px"]}
             width="100%"
@@ -53,7 +53,7 @@ const Planning = () => {
           <Image
             zIndex={1}
             borderRadius="10px 10px 0 0"
-            src="\public\planning2.jpg"
+            src="planning2.jpg"
             alt="planning"
             height={["400px", "500px"]}
             width="100%"
